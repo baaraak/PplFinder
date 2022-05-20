@@ -1,24 +1,28 @@
 import React from "react";
-import Text from "components/Text";
 import UserList from "components/UserList";
 import { usePeopleFetch } from "hooks";
-import * as S from "./style";
+import { useFavoritesList } from "hooks/useFavoritesList";
+import Layout from "components/Layout";
+import Header from "components/Header";
 
-const Home = () => {
-  const { users, isLoading } = usePeopleFetch();
+const Home = (props) => {
+  const { users, isLoading, fetchUsers, resetUsers } = usePeopleFetch();
+  const { favorites, toggleFavorite } = useFavoritesList();
 
   return (
-    <S.Home>
-      <S.Content>
-        <S.Header>
-          <Text size="64px" bold>
-            PplFinder
-          </Text>
-        </S.Header>
-        <UserList users={users} isLoading={isLoading} />
-      </S.Content>
-    </S.Home>
+    <Layout>
+      <Header>PplFinder</Header>
+
+      <UserList
+        users={users}
+        isLoading={isLoading}
+        fetchUsers={fetchUsers}
+        resetUsers={resetUsers}
+        favorites={favorites}
+        toggleFavorite={toggleFavorite}
+      />
+    </Layout>
   );
 };
 
-export default Home;
+export default React.memo(Home);
