@@ -14,3 +14,10 @@ export const List = styled.div`
   margin-block-start: 30px;
   overflow-y: auto;
 `;
+
+export const Empty = styled.div`
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.5;
+`;

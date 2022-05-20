@@ -6,16 +6,20 @@ const FavoritesList = ({ favorites, toggleFavorite }) => {
   return (
     <S.UserList>
       <S.List>
-        {favorites.map((user, index) => {
-          return (
-            <UserCard
-              key={index}
-              user={user}
-              isFavorited
-              onFavorite={() => toggleFavorite(user)}
-            />
-          );
-        })}
+        {favorites.length ? (
+          favorites.map((user, index) => {
+            return (
+              <UserCard
+                key={index}
+                user={user}
+                isFavorited
+                onFavorite={() => toggleFavorite(user)}
+              />
+            );
+          })
+        ) : (
+          <S.Empty>You don't have any favorites yet.</S.Empty>
+        )}
       </S.List>
     </S.UserList>
   );
