@@ -2,14 +2,14 @@ import React from "react";
 import Text from "components/Text";
 import * as S from "./style";
 
-const Header = ({ children }) => {
+const Title = ({ children }) => {
   return (
-    <S.Header>
+    <S.Title>
       <Text size="64px" bold>
         {children}
       </Text>
-    </S.Header>
+    </S.Title>
   );
 };
 
-export default Header;
+export default Title;

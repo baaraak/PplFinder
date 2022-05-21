@@ -3,7 +3,7 @@ import Text from "components/Text";
 import UserList from "components/UserList";
 import { useFavoritesList } from "hooks/useFavoritesList";
 import FavoritesList from "components/FavoritesList";
-import Header from "components/Header";
+import Title from "components/Title";
 import Layout from "components/Layout";
 
 const Favorites = () => {
@@ -11,7 +11,7 @@ const Favorites = () => {
 
   return (
     <Layout>
-      <Header>Your Favorites</Header>
+      <Title>Your Favorites</Title>
       <FavoritesList favorites={favorites} toggleFavorite={toggleFavorite} />
     </Layout>
   );

@@ -3,7 +3,7 @@ import UserList from "components/UserList";
 import { usePeopleFetch } from "hooks";
 import { useFavoritesList } from "hooks/useFavoritesList";
 import Layout from "components/Layout";
-import Header from "components/Header";
+import Title from "components/Title";
 
 const Home = (props) => {
   const { users, isLoading, fetchUsers, resetUsers } = usePeopleFetch();
@@ -11,7 +11,7 @@ const Home = (props) => {
 
   return (
     <Layout>
-      <Header>PplFinder</Header>
+      <Title>PplFinder</Title>
 
       <UserList
         users={users}

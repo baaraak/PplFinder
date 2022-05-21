@@ -13,13 +13,16 @@ import {
 export const UserList = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 500px;
+  width: 90%;
 `;
 
 export const List = styled.div`
   display: flex;
   flex-direction: column;
   gap: 35px;
-  width: 500px;
+  width: 100%;
+  margin: 0 auto;
   height: calc(100vh - 270px);
   margin-block-start: 30px;
   overflow-y: auto;

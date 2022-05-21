@@ -34,8 +34,19 @@ export const UserInfo = styled.div`
   max-height: 128px;
   gap: 2px;
   overflow: hidden;
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const UserPicture = styled.img`
   border-radius: 45%;
+
+  @media (max-width: 800px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
