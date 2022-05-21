@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createMuiTheme, ThemeProvider as Provider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { createGlobalStyle } from "styled-components";
-import { THEMES } from "constant";
+import { THEMES } from "services/constant";
 
 const ThemeContext = React.createContext();
 

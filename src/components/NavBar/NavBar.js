@@ -8,7 +8,7 @@ import { useTheme } from "theme/ThemeProvider";
 import { IconButton } from "@material-ui/core";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
-import { THEMES } from "constant";
+import { THEMES } from "services/constant";
 
 const NavBar = () => {
   const [value, setValue] = useState(0);
